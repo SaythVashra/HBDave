@@ -1,0 +1,59 @@
+html{
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    text-align: center;
+    background-image: url("img/background.png");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.img-div {
+    position: relative;
+    animation: .44s linear 0.3s infinite alternate move-sayth;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+@keyframes move-sayth {
+    0%  {right: 0px; bottom: 0px}
+    10% {right: 20px; bottom: 25px ; transform: rotate(-3deg)}
+    20% {right: 40px; bottom: 50px ; transform: rotate(-6deg)}
+    30% {right: 20px; bottom: 25px ; transform: rotate(0deg)}
+    50% {right: 0px; bottom: 0px}
+}
+
+.image {
+    width: 30rem;
+}
+
+.header {
+    color: white;
+    font-size: 2rem;
+    animation: .44s linear 0.3s infinite alternate dave-header;
+}
+
+@keyframes dave-header {
+    from {color: white; transform: scale(1)} to {color: yellow; transform: scale(1.2)}
+}
+
+@media screen and (max-width: 768px) {
+    .image {
+        margin-top: 70px;
+        margin-bottom: 50px;
+        width: 20rem;
+    }
+
+    .header {
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+    }
+}
